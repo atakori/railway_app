@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const PORT = process.env || 3001
+const PORT = process.env.PORT || 3001
 
-app.listen(process.env.PORT || 3001, (req,res) => {
-    console.log("We are listening on port 3001")
+app.listen(PORT, (req,res) => {
+    console.log(`We are listening on port ${PORT}`)
 })
 
 app.get('/', function(req,res) {
